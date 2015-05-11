@@ -24,7 +24,7 @@ ig.drawTemperatures = ->
     {temps:threeDayTemps, index, binnedDays}
 
   color = d3.scale.quantize!
-    ..range ['#f6f6f6','#faeee3','#fde5d0','#ffdcbe','#ffd5ac','#ffcc9a','#ffc489','#ffbb74','#ffb361']
+    ..range ['#f6f6f6','#fde5d0','#ffd5ac','#ffc489','#ffb361', '#fd8d3c']
 
   y = 57
   x = 122
@@ -122,6 +122,10 @@ ig.drawTemperatures = ->
       path.attr \d ""
 
   drawOneYear!
+  container.append \ul
+    ..attr \class \legend
+    ..append \li .html "Nejčastější (průměrné) teploty"
+    ..append \li .html "Teplotní minima a maxima"
 
 
 

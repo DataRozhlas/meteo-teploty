@@ -106,8 +106,8 @@
     left 23px
     path
       fill none
-      stroke lighten(desaturate(ColorHeadingLink, 50%), 60%)
-      stroke-width 1.5
+      stroke #bd0026
+      stroke-width 1.2
   .monthContainer:hover ~ svg
     opacity 0.1
   .year-axis
@@ -164,3 +164,26 @@
           span
             transform translate(-100%, 0)
 
+  .legend
+    position absolute
+    top 0px
+    left 28px
+    margin 0px
+    padding 0px
+    list-style-type none
+    li
+      padding-left 17px
+      position relative
+      &:before
+        position absolute
+        left 0px
+        top 5px
+        content " "
+        width 8px
+        height 8px
+        border-radius 50%
+      &:first-child:before
+        background #fd8d3c
+      &:last-child:before
+        border 1px solid #c
+        background #f6f6f6
